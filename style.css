@@ -1,0 +1,209 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/*Inicia Style del Body*/
+body{
+    background-color: #CEFAD2;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+/*Inicia Flexbox del Header*/
+header{
+    background: linear-gradient(to bottom, #008037, #CEFAD2);
+    width: 100%;
+    height: 100px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+}
+
+.navegadorSitio{
+    margin-right: 20px;
+}
+
+.navegadorSitio ul li{
+    display: inline-block;
+    margin-left: 20px;
+    text-align: left;
+}
+
+.navegadorSitio ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    border: solid 1px white;
+    background-color: #CEFAD2;
+
+}
+
+.logoSitio{
+    display: flex;
+    width: 100px;
+    height: 100px;
+}
+
+
+/*Acaba Flexbox del Header*/
+
+/*Inicia Flexbox del Index*/
+
+.fotoCuau{
+    width: 50%;
+    height: 50%;
+    position: center;
+    margin: 30px 0px 30px 0px;
+}
+
+.contenedor{
+    text-align: center;
+    margin: 50px;
+    padding: 30px;
+    border: solid 1px black;
+}
+
+p{
+    background-color: #CEFAD2;
+    color: black;
+    font-size: 1.5rem;
+    margin: 20px 100px 20px 100px;
+}
+
+.trabajo{
+    color: #008037;
+    font-style: italic;
+    font-weight: 700;
+    
+}
+
+/*Acaba Flexbox de Index*/
+
+/*Inicia Style de página "Acerca de mí"*/
+
+.seccionAcerca{
+    display: inline-flex;
+}
+
+.fotoAcerca{
+    width: 50%;
+    height: 50%;
+    margin: 30px 0px 30px 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.textoAcercaDe{
+    background-color: #CEFAD2;
+    color: black;
+    font-size: 1.1rem;
+    text-align: left;
+    margin: 20px 10px 20px 10px;
+    padding: 5px 10px 5px 10px;
+}
+
+/*Inicia Grid en página "Proyectos"*/
+
+.imagenGaleria {
+    width: 150px;
+    height: 150px;
+}
+
+.imagenGaleria:hover {
+    filter: grayscale(100%);
+    z-index: 5;
+}
+
+.gridPadre{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+        "imagenUno imagenDos"
+        "imagenTres imagenCuatro"
+    ;
+}
+
+.imagenUno{
+    grid-area: imagenUno;
+}
+
+.imagenDos{
+    grid-area: imagenDos;
+}
+
+.imagenTres{
+    grid-area: imagenTres;
+}
+
+.imagenCuatro{
+    grid-area: imagenCuatro;
+}
+
+/*Inicia Flexbox de página "Mis textos publicados"*/
+
+table{
+    margin: 50px 50px 50px 50px;
+}
+
+/*Inicia Flexbox de página "Contacto"*/
+
+.formularioUno{
+    display: inline-flex;
+    height: 100%;
+    margin: 20px 50px 20px 50px;
+    padding: 20px 20px 20px 20px;
+}
+
+.formularioDos{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+/*Inicia Style del Footer*/
+
+footer{
+    background: linear-gradient(to top, #008037, #CEFAD2);
+    width: 100%;
+    height: 100px;
+    display: inline-block;
+    align-items: center;
+    text-align: end;
+}
+
+footer ul li a {
+    margin-left: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: solid 1px white;
+    background-color: #CEFAD2;
+}
+
+/* Vista Móvil*/
+@media only screen and (max-width:424px) {
+    .fotoCuau{
+        display: none;
+    }
+    
+    .fotoAcerca{
+        display: none;
+    }
+    .gridPadre{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas:
+        "imagenUno"
+        "imagenDos"
+        "imagenTres"
+        "imagenCuatro"
+        ;
+    }
+    .formularioUno{
+        display: none;
+    }
+}
